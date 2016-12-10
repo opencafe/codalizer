@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpmd/phpmd": "^2.5",
+        "league/plates": "3.*"
+    },
+    "require-dev":{
+        "raveren/kint": "^1.0"
+    }
+}
