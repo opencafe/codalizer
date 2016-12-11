@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="@project.version@" timestamp="2016-12-10T21:29:35+00:00">
+<pmd version="@project.version@" timestamp="2016-12-11T22:49:19+00:00">
   <file name="/Library/WebServer/Documents/datium/src/Convert.php">
     <violation beginline="95" endline="102" rule="ShortMethodName" ruleset="Naming Rules" package="OpenCafe\Tools" externalInfoUrl="http://phpmd.org/rules/naming.html#shortmethodname" class="Convert" method="to" priority="3" id="1">
       Avoid using short method names like Convert::to(). The configured minimum method name length is 3.
@@ -16,61 +16,30 @@
       Avoid unused private fields such as '$simple'.
     </violation>
   </file>
-  <file name="/Library/WebServer/Documents/datium/src/Datium.php">
-    <violation beginline="34" endline="656" rule="TooManyFields" ruleset="Code Size Rules" package="OpenCafe" externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanyfields" class="Datium" priority="3" id="5">
-      The class Datium has 24 fields. Consider redesigning Datium to keep the number of fields under 15.
-    </violation>
-    <violation beginline="34" endline="656" rule="TooManyPublicMethods" ruleset="Code Size Rules" package="OpenCafe" externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanypublicmethods" class="Datium" priority="3" id="6">
-      The class Datium has 16 public methods. Consider refactoring Datium to keep number of public methods under 10.
-    </violation>
-    <violation beginline="51" endline="51" rule="LongVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#longvariable" priority="3" id="7">
-      Avoid excessively long variable names like $date_interval_expression. Keep variable name length under 20.
-    </violation>
-    <violation beginline="352" endline="368" rule="ShortMethodName" ruleset="Naming Rules" package="OpenCafe" externalInfoUrl="http://phpmd.org/rules/naming.html#shortmethodname" class="Datium" method="to" priority="3" id="8">
-      Avoid using short method names like Datium::to(). The configured minimum method name length is 3.
-    </violation>
-  </file>
   <file name="/Library/WebServer/Documents/datium/src/Lang.php">
-    <violation beginline="93" endline="93" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="9">
+    <violation beginline="93" endline="93" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="5">
       Avoid unused local variables such as '$key'.
     </violation>
   </file>
   <file name="/Library/WebServer/Documents/datium/src/Leap.php">
-    <violation beginline="47" endline="54" rule="BooleanGetMethodName" ruleset="Naming Rules" package="OpenCafe\Tools" externalInfoUrl="http://phpmd.org/rules/naming.html#booleangetmethodname" class="Leap" method="get" priority="4" id="10">
+    <violation beginline="47" endline="54" rule="BooleanGetMethodName" ruleset="Naming Rules" package="OpenCafe\Tools" externalInfoUrl="http://phpmd.org/rules/naming.html#booleangetmethodname" class="Leap" method="get" priority="4" id="6">
       The 'get()' method which returns a boolean should be named 'is...()' or 'has...()'
     </violation>
   </file>
   <file name="/Library/WebServer/Documents/datium/src/SimpleDiff.php">
-    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="11">
+    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="7">
       Avoid unused parameters such as '$start'.
     </violation>
-    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="12">
+    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="8">
       Avoid unused parameters such as '$end'.
     </violation>
-    <violation beginline="61" endline="61" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="13">
+    <violation beginline="61" endline="61" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="9">
       Avoid unused local variables such as '$result'.
     </violation>
   </file>
   <file name="/Library/WebServer/Documents/datium/tests/SimpleDiffTest.php">
-    <violation beginline="10" endline="237" rule="ExcessiveMethodLength" ruleset="Code Size Rules" package="OpenCafe\Datium\Test" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength" class="SimpleDiffTest" method="testSimpleDiff" priority="3" id="14">
+    <violation beginline="10" endline="237" rule="ExcessiveMethodLength" ruleset="Code Size Rules" package="OpenCafe\Datium\Test" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength" class="SimpleDiffTest" method="testSimpleDiff" priority="3" id="10">
       The method testSimpleDiff() has 228 lines of code. Current threshold is set to 100. Avoid really long methods.
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/vendor/composer/ClassLoader.php">
-    <violation beginline="43" endline="403" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="Composer\Autoload" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="ClassLoader" priority="3" id="15">
-      The class ClassLoader has an overall complexity of 57 which is very high. The configured complexity threshold is 50.
-    </violation>
-    <violation beginline="248" endline="251" rule="BooleanGetMethodName" ruleset="Naming Rules" package="Composer\Autoload" externalInfoUrl="http://phpmd.org/rules/naming.html#booleangetmethodname" class="ClassLoader" method="getUseIncludePath" priority="4" id="16">
-      The 'getUseIncludePath()' method which returns a boolean should be named 'is...()' or 'has...()'
-    </violation>
-    <violation beginline="259" endline="259" rule="LongVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#longvariable" priority="3" id="17">
-      Avoid excessively long variable names like $classMapAuthoritative. Keep variable name length under 20.
-    </violation>
-    <violation beginline="344" endline="402" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="Composer\Autoload" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="ClassLoader" method="findFileWithExtension" priority="3" id="18">
-      The method findFileWithExtension() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.
-    </violation>
-    <violation beginline="344" endline="402" rule="NPathComplexity" ruleset="Code Size Rules" package="Composer\Autoload" externalInfoUrl="http://phpmd.org/rules/codesize.html#npathcomplexity" class="ClassLoader" method="findFileWithExtension" priority="3" id="19">
-      The method findFileWithExtension() has an NPath complexity of 1944. The configured NPath complexity threshold is 200.
     </violation>
   </file>
 </pmd>

@@ -5,5 +5,11 @@
     },
     "require-dev":{
         "raveren/kint": "^1.0"
+    },
+    "autoload":{
+      "psr-4":{
+        "OpenCafe\\Codalizer\\": "facade/",
+        "Codalizer\\": "facade/"
+      }
     }
 }
