@@ -4,14 +4,14 @@ namespace OpenCafe\Codalizer;
 
 class ReportGenerator {
 
-  public static function make() {
+  public static function make($projectPath) {
 
     $result['index'] = $result['codeSize'] = $result['naming'] = $result['unused'] = 0;
 
     /*
      * Create a PHPMD xml report
      */
-    shell_exec( 'rm report.xml; vendor/bin/phpmd ../datium xml codesize,unusedcode,naming >> report.xml' );
+    shell_exec( 'rm report.xml; vendor/bin/phpmd ' . $projectPath . ' xml codesize,unusedcode,naming >> report.xml' );
 
     $xml = simplexml_load_file('report.xml');
 

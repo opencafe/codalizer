@@ -1,15 +1,17 @@
 {
     "require": {
         "phpmd/phpmd": "^2.5",
-        "league/plates": "3.*"
+        "league/plates": "3.*",
+        "symfony/console": "^3.2"
     },
     "require-dev":{
         "raveren/kint": "^1.0"
     },
     "autoload":{
       "psr-4":{
-        "OpenCafe\\Codalizer\\": "facade/",
-        "Codalizer\\": "facade/"
+        "OpenCafe\\Codalizer\\": "src/",
+        "Codalizer\\": "src/",
+        "AppBundle\\Command\\": "src/AppBundle/Command/"
       }
     }
 }
