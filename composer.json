@@ -9,8 +9,7 @@
     },
     "autoload":{
       "psr-4":{
-        "OpenCafe\\Codalizer\\": "src/",
-        "Codalizer\\": "src/",
+        "OpenCafe\\Codalizer\\": "src/facade/",
         "AppBundle\\Command\\": "src/AppBundle/Command/"
       }
     }

@@ -48,7 +48,10 @@ class ReportGenerator {
     $xml->asXML('report.xml');
 
     $result['xmlFile'] = $xml->file;
+
     $result['fileViolations']  = count($xml->children());
+
+    file_put_contents('FormBuilder.json', json_encode($result) );
 
     return $result;
 

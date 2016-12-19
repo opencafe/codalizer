@@ -5,6 +5,7 @@ namespace AppBundle\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use OpenCafe\Codalizer\ReportGenerator;
 
 class GenerateReportCommand extends Command
 {
@@ -33,12 +34,10 @@ class GenerateReportCommand extends Command
           '',
       ]);
 
-      // outputs a message followed by a "\n"
-      $output->writeln('Whoa!');
+      \OpenCafe\Codalizer\ReportGenerator::make( __DIR__ . "/../../../../datium");
 
-      // outputs a message without adding a "\n" at the end of the line
-      $output->write('You are about to ');
-      $output->write('generate reports.');
+      // outputs a message followed by a "\n"
+      $output->writeln('Report Generated successfuly!');
 
     }
 }

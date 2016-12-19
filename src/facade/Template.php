@@ -8,7 +8,7 @@ class Template{
 
   public static function render($input){
 
-    $templates = new Engine( __DIR__ . '/../templates' );
+    $templates = new Engine( __DIR__ . '/../../templates' );
 
     echo $templates->render('main', ['title' => 'Main Page',
                                      'fileViolations' => $input['fileViolations'],
