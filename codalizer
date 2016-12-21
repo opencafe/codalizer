@@ -1,0 +1,16 @@
+#!/usr/bin/php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use AppBundle\Command\GenerateReportCommand;
+use AppBundle\Command\ServeCommand;
+
+$application = new Application();
+
+$application->add(new GenerateReportCommand() );
+
+$application->add(new ServeCommand() );
+
+$application->run();
