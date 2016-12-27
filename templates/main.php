@@ -7,17 +7,22 @@
 
 <?=$this->section('content')?>
 <div class='container'>
-  <div id="file-violations">Violation has been found on <?=$this->e($fileViolations); ?> files!</div>
-  <div id="violations">All Violations: <?=$this->e($violations); ?></div>
-  <div id="code-size">Code Size: <?=$this->e($codeSize); ?></div>
-  <div id="naming">Naming: <?=$this->e($naming); ?></div>
-  <div id="unused">Unused Code: <?=$this->e($unused); ?></div>
-  <?php foreach($items as $item) { ?>
+  <div id="file-violations">Violation has been found on <span class='red'><?=$this->e($fileViolations); ?></span> files!</div>
+  <div id="violations">All Violations: <span class='red'>#<?=$this->e($violations); ?></span></div>
+  <div id="code-size">Code Size: <span class='red'><?=$this->e($codeSize); ?></span></div>
+  <div id="naming">Naming: <span class='red'><?=$this->e($naming); ?></span></div>
+  <div id="unused">Unused Code: <span class='red'><?=$this->e($unused); ?></span></div>
+  Violations:
+  <br>
+  <div class='violations'>
+  <?php  foreach($details as $item) { ?>
 
-    <?php echo $item->attributes()->name; ?>
+    <a href="page.php?id=<?php echo $item->id ?>"><?php  echo $item->where; ?></a>
+
     <br>
 
-  <?php } ?>
+  <?php  } ?>
+  </div>
 </div>
 </body>
 </html>

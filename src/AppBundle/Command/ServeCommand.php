@@ -29,8 +29,12 @@ class ServeCommand extends Command
       // outputs multiple lines to the console (adding "\n" at the end of each line)
       $output->writeln([
           'Serving start',
-          '=============',
+          '================================================================================',
           '',
+      ]);
+
+      $output->writeln([
+        shell_exec('php codalizer report:make')
       ]);
 
       $output->writeln([

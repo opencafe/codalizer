@@ -30,7 +30,7 @@ class GenerateReportCommand extends Command
       // outputs multiple lines to the console (adding "\n" at the end of each line)
       $output->writeln([
           'Report Generator',
-          '================',
+          '================================================================================',
           '',
       ]);
 

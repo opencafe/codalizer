@@ -2,6 +2,8 @@
 
 namespace OpenCafe\Codalizer;
 
+use OpenCafe\Codalizer\ReportParser;
+
 class ReportGenerator {
 
   public static function make($projectPath) {
@@ -15,39 +17,9 @@ class ReportGenerator {
 
     $xml = simplexml_load_file('report.xml');
 
-    foreach($xml->file as $item) {
-
-      foreach($item->violation as $violation) {
-
-        $result['index']++;
-
-        if( $violation['ruleset'] == 'Code Size Rules' ){
-
-          $result['codeSize']++;
-
-        }
-
-        if( $violation['ruleset'] == 'Naming Rules' ){
-
-          $result['naming']++;
-
-        }
-
-        if( $violation['ruleset'] == 'Unused Code Rules' ){
-
-          $result['unused']++;
-
-        }
-
-        $violation->addAttribute('id', $result['index']);
-
-      }
-
-    }
+    $result = ReportParser::make($xml);
 
     $xml->asXML('report.xml');
-
-    $result['xmlFile'] = $xml->file;
 
     $result['fileViolations']  = count($xml->children());
 

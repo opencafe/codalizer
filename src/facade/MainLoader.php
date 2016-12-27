@@ -4,7 +4,7 @@ namespace OpenCafe\Codalizer;
 
 use League\Plates\Engine;
 
-class Template{
+class MainLoader{
 
   public static function render($input){
 
@@ -13,10 +13,11 @@ class Template{
     echo $templates->render('main', ['title' => 'Main Page',
                                      'fileViolations' => $input['fileViolations'],
                                      'violations' => $input['index'],
-                                     'items' => $input['xmlFile'],
+                                     'details' => $input['details'],
                                      'codeSize' => $input['codeSize'],
                                      'naming' => $input['naming'],
-                                     'unused' => $input['unused']
+                                     'unused' => $input['unused'],
+                                     'details' => $input['details']
                                      ]);
 
   }
