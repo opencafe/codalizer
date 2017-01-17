@@ -1,16 +1,50 @@
 #!/usr/bin/php
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any our classes "manually". Feels great to relax.
+|
+*/
+
 require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use AppBundle\Command\GenerateReportCommand;
-use AppBundle\Command\ServeCommand;
 
-$application = new Application();
+/*
+|--------------------------------------------------------------------------
+| Create The Application
+|--------------------------------------------------------------------------
+|
+| Create the codilizer console component
+|
+*/
 
-$application->add(new GenerateReportCommand() );
+$app = new Application('Codilizer console component','0.1');
 
-$application->add(new ServeCommand() );
+/*
+|--------------------------------------------------------------------------
+| Register The Bootstrappers
+|--------------------------------------------------------------------------
+|
+| The bootstrapper register the commands define
+|
+*/
 
-$application->run();
+require __DIR__ . '/src/AppBundle/bootstrap.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Codilizer Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application
+|
+*/
+exit($app->run());

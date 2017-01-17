@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="@project.version@" timestamp="2016-12-27T20:30:59+00:00">
-  <file name="/Library/WebServer/Documents/datium/src/Convert.php">
-    <violation beginline="95" endline="102" rule="ShortMethodName" ruleset="Naming Rules" package="OpenCafe\Tools" externalInfoUrl="http://phpmd.org/rules/naming.html#shortmethodname" class="Convert" method="to" priority="3" id="1">
-      Avoid using short method names like Convert::to(). The configured minimum method name length is 3.
-    </violation>
-    <violation beginline="137" endline="137" rule="LongVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#longvariable" priority="3" id="2">
-      Avoid excessively long variable names like $days_of_gregorain_years. Keep variable name length under 20.
-    </violation>
-    <violation beginline="345" endline="345" rule="LongVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#longvariable" priority="3" id="3">
-      Avoid excessively long variable names like $days_of_gregorain_years. Keep variable name length under 20.
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/src/DateTimeFormat.php">
-    <violation beginline="25" endline="25" rule="UnusedPrivateField" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedprivatefield" priority="3" id="4">
-      Avoid unused private fields such as '$simple'.
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/src/Lang.php">
-    <violation beginline="93" endline="93" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="5">
-      Avoid unused local variables such as '$key'.
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/src/Leap.php">
-    <violation beginline="47" endline="54" rule="BooleanGetMethodName" ruleset="Naming Rules" package="OpenCafe\Tools" externalInfoUrl="http://phpmd.org/rules/naming.html#booleangetmethodname" class="Leap" method="get" priority="4" id="6">
-      The 'get()' method which returns a boolean should be named 'is...()' or 'has...()'
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/src/SimpleDiff.php">
-    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="7">
-      Avoid unused parameters such as '$start'.
-    </violation>
-    <violation beginline="40" endline="40" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="8">
-      Avoid unused parameters such as '$end'.
-    </violation>
-    <violation beginline="61" endline="61" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3" id="9">
-      Avoid unused local variables such as '$result'.
-    </violation>
-  </file>
-  <file name="/Library/WebServer/Documents/datium/tests/SimpleDiffTest.php">
-    <violation beginline="10" endline="237" rule="ExcessiveMethodLength" ruleset="Code Size Rules" package="OpenCafe\Datium\Test" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength" class="SimpleDiffTest" method="testSimpleDiff" priority="3" id="10">
-      The method testSimpleDiff() has 228 lines of code. Current threshold is set to 100. Avoid really long methods.
+<pmd version="@project.version@" timestamp="2017-01-17T20:40:54+00:00">
+  <file name="/Users/aj/Projects/codalizer/src/facade/ReportParser.php">
+    <violation beginline="67" endline="67" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="1">
+      Avoid unused parameters such as '$data'.
     </violation>
   </file>
 </pmd>

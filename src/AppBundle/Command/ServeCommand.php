@@ -1,48 +1,43 @@
 <?php
 
-namespace AppBundle\Command;
+namespace OpenCafe\Codalizer\AppBundle\Command;
 
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class ServeCommand extends Command
 {
+    /**
+     * configure the command
+     *
+     * @return void
+     */
     protected function configure()
     {
-      $this
-      // the name of the command (the part after "bin/console")
-      ->setName('serve')
+        $this->setName('serve')
+            ->setDescription('Serve codalizer')
+            ->setHelp("This command allows you to serve the codalizer...");
 
-      // the short description shown while running "php bin/console list"
-      ->setDescription('Serve codalizer')
+        $this->addOption('host','o',InputOption::VALUE_OPTIONAL,'The serve host.','localhost');
 
-      // the full command description shown when running the command with
-      // the "--help" option
-      ->setHelp("This command allows you to serve the codalizer...");
-
+        $this->addOption('port','p',InputOption::VALUE_OPTIONAL,'The serve port.','8000');
     }
 
+    /**
+     * Execute the command
+     *
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @retrun void
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $host = $input->getOption('host');
 
-      // outputs multiple lines to the console (adding "\n" at the end of each line)
-      $output->writeln([
-          'Serving start',
-          '================================================================================',
-          '',
-      ]);
+        $port = $input->getOption('port');
 
-      $output->writeln([
-        shell_exec('php codalizer report:make')
-      ]);
-
-      $output->writeln([
-        shell_exec('php -S 127.0.0.1:8000')
-      ]);
-
-      // outputs a message followed by a "\n"
-      $output->writeln('Codalizer served!');
-
+        exec("php -S $host:$port");
     }
 }
