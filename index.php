@@ -2,8 +2,10 @@
 
 error_reporting( E_ALL );
 
-require_once 'vendor/autoload.php';
+use OpenCafe\Codalizer\Loader;
 
-$app = OpenCafe\Codalizer\MainLoader::render(
-  (array)json_decode( file_get_contents('FormBuilder.json', true))
-);
+require __DIR__ . '/vendor/autoload.php';
+
+Loader::render('main',json_decode(
+    file_get_contents('FormBuilder.json', true), true
+));

@@ -1,16 +1,19 @@
 {
-    "require": {
-        "phpmd/phpmd": "^2.5",
-        "league/plates": "3.*",
-        "symfony/console": "^3.2"
+  "require": {
+    "phpmd/phpmd": "^2.5",
+    "league/plates": "3.*",
+    "symfony/console": "^3.2"
+  },
+  "require-dev":{
+    "raveren/kint": "^1.0",
+    "phpunit/phpunit": "~5.0"
+  },
+  "autoload":{
+    "psr-4":{
+      "OpenCafe\\Codalizer\\": "src/"
     },
-    "require-dev":{
-        "raveren/kint": "^1.0"
-    },
-    "autoload":{
-      "psr-4":{
-        "OpenCafe\\Codalizer\\": "src/facade/",
-        "AppBundle\\Command\\": "src/AppBundle/Command/"
-      }
-    }
+    "files": [
+      "helpers.php"
+    ]
+  }
 }

@@ -1,2 +1,4 @@
 vendor/
 composer.lock
+report.xml
+FormBuilder.json
