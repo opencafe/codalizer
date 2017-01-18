@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Anetwork Console | ConsoleStyle
+ * Console Style
  *
- * @author Alireza Josheghani <a.josheghani@anetwork.ir>
+ * @author Alireza Josheghani <josheghani.dev@gmail.com>
  * @version 0.1
  */
 namespace OpenCafe\Codalizer\AppBundle;
