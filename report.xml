@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pmd version="@project.version@" timestamp="2017-01-17T20:40:54+00:00">
-  <file name="/Users/aj/Projects/codalizer/src/facade/ReportParser.php">
-    <violation beginline="67" endline="67" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3" id="1">
-      Avoid unused parameters such as '$data'.
-    </violation>
-  </file>
-</pmd>
