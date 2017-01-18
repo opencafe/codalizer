@@ -2,6 +2,7 @@
 
 namespace OpenCafe\Codalizer\AppBundle\Command;
 
+use OpenCafe\Codalizer\AppBundle\Style;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
@@ -34,9 +35,12 @@ class ServeCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $host = $input->getOption('host');
+        $style = new Style($input,$output);
 
+        $host = $input->getOption('host');
         $port = $input->getOption('port');
+
+        $style->info("Codilizer development server started on http://$host:$port");
 
         exec("php -S $host:$port");
     }
