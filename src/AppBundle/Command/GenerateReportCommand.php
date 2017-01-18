@@ -17,8 +17,8 @@ class GenerateReportCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('report:make')
-            ->setDescription('Generate reports')
+        $this->setName('generate:report')
+            ->setDescription('Generate reports from project')
             ->setHelp("This command allows you to generate reports...");
 
         $this->addArgument('directory',InputArgument::REQUIRED,'The Project directory');
