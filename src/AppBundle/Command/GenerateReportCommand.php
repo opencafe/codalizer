@@ -2,6 +2,7 @@
 
 namespace OpenCafe\Codalizer\AppBundle\Command;
 
+use OpenCafe\Codalizer\AppBundle\Style;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -29,14 +30,17 @@ class GenerateReportCommand extends Command
      *
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
+     * @return string
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        // outputs multiple lines to the console (adding "\n" at the end of each line)
-        ReportGenerator::make($input->getArgument('directory'));
+        $style = new Style($input,$output);
 
-        // outputs a message followed by a "\n"
-        $output->writeln('Report Generated successfuly!');
+        // outputs multiple lines to the console (adding "\n" at the end of each line)
+        if(ReportGenerator::make($input->getArgument('directory'))){
+            return $style->info('Report Generated successfuly!');
+        }
+
+        return $style->danger('Report Generated faild!');
     }
 }
