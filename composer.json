@@ -1,4 +1,17 @@
 {
+  "name": "opencafe/codalizer",
+  "description" : "Code analyzer based on PHP mess detector",
+  "keywords": [ "analyze", "php-analyze", "codalizer" ],
+  "authors": [
+    {
+      "name": "Mehdi Hosseini",
+      "email": "mehdi.hosseini.dev@gmail.com"
+    },
+    {
+      "name": "Alireza Josheghani",
+      "email": "josheghani.dev@gmail.com"
+    }
+  ],
   "require": {
     "phpmd/phpmd": "^2.5",
     "league/plates": "3.*",
@@ -15,5 +28,6 @@
     "files": [
       "helpers.php"
     ]
-  }
+  },
+  "license": "MIT"
 }
