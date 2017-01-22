@@ -37,6 +37,6 @@ if(! function_exists('view')){
     {
         $templates = new Engine(template_path());
 
-        echo $templates->render($name, $datas);
+        return $templates->render($name, $datas);
     }
 }
