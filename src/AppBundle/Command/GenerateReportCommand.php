@@ -3,6 +3,8 @@
 namespace OpenCafe\Codalizer\AppBundle\Command;
 
 use OpenCafe\Codalizer\AppBundle\Style;
+use OpenCafe\Codalizer\HtmlGenerate;
+use OpenCafe\Codalizer\Loader;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -38,9 +40,13 @@ class GenerateReportCommand extends Command
 
         // outputs multiple lines to the console (adding "\n" at the end of each line)
         if(ReportGenerator::make($input->getArgument('directory'))){
-            return $style->info('Report Generated successfuly!');
-        }
+            
+            (new HtmlGenerate)->generatePages();
 
-        return $style->danger('Report Generated faild!');
+            $style->info('Report Generated successfuly!');
+        } else {
+
+            $style->danger('Report Generated faild!');
+        }
     }
 }

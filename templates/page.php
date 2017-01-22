@@ -9,34 +9,31 @@
 <?=$this->section('content')?>
 <div class='container'>
 
-  <?php  foreach($details as $item) { ?>
+    <?php  foreach($details as $item): ?>
 
-    <?php if($item['id'] == $_REQUEST['id'] ) { ?>
+        <?php if($item['id'] == $_REQUEST['id'] ): ?>
 
-      <style>
-      li:nth-child(<?php echo $item['start'][0] ?>)
-      { background-color: rgba(255, 87, 34, 0.32); }
-      </style>
+            <style>
+                li:nth-child(<?php echo $item['start'][0] ?>)
+                { background-color: rgba(255, 87, 34, 0.32); }
+            </style>
 
-    <div class='violations'>
-    <a href="page.php?id=<?php echo $item['id'] ?>"><?php  echo $item['where'][0]; ?></a>
-    <br>
-    <?php echo $item['description'][0] ?>
-    <br>
-    line: <?php echo $item['start'][0] ?>
-    </div>
-    <br>
+            <div class='violations'>
+                <a href="page.php?id=<?php echo $item['id'] ?>"><?php echo 
+                    $item['where'][0]; ?></a>
+                <br>
+                <?php echo $item['description'][0] ?>
+                <br>
+                line: <?php echo $item['start'][0] ?>
+            </div>
+            <br>
 
-    <pre class="prettyprint linenums">
-    <?php
+            <pre class="prettyprint linenums">
+                <?php echo htmlentities(file_get_contents($item['where'][0])); ?>
+            </pre>
 
-    echo htmlentities(file_get_contents($item['where'][0]));
-
-     ?>
-   </pre>
-
-  <?php  } ?>
-  <?php } ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
 </div>
 </body>
 </html>
