@@ -15,9 +15,10 @@
   Violations:
   <br>
   <div class='violations'>
+
   <?php  foreach($details as $item) { ?>
 
-    <a href="page.php?id=<?php echo $item->id ?>"><?php  echo $item->where; ?></a>
+    <a href="page.php?id=<?php echo $item['id'] ?>"><?php  echo $item['where'][0]; ?></a>
 
     <br>
 
