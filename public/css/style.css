@@ -1,0 +1,22 @@
+body{
+  background-color: rgba(128, 128, 128, 0);
+  font-family: monospace;
+  line-height: 20px;
+}
+
+.violations{
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.red{
+  color:red;
+}
+
+.green{
+  color:green;
+}
+
+.padding{
+  padding: 10px;
+}
