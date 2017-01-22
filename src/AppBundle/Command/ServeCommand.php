@@ -42,6 +42,6 @@ class ServeCommand extends Command
 
         $style->info("Codilizer development server started on http://$host:$port");
 
-        exec("php -S $host:$port");
+        exec("cd public; php -S $host:$port");
     }
 }

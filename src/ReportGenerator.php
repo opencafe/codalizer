@@ -2,7 +2,8 @@
 
 namespace OpenCafe\Codalizer;
 
-class ReportGenerator {
+class ReportGenerator
+{
 
     /**
      * Make the report from project
